@@ -1,5 +1,6 @@
 class  MyThread extends Thread
-{   public MyThread(String name)
+{
+    public MyThread(String name)
     {
         super(name);
     }
@@ -11,14 +12,23 @@ class  MyThread extends Thread
  }
  }
 }
-public class Theus {
-public static void main(String[] args) throws InterruptedException
+public class ThreadDemo {
+
+  
+    public static void main(String[] args) throws InterruptedException
     {
-      MyThread t=new MyThread("threaddd");
+      MyThread t=new MyThread("t1");
       t.start();
-    for(int i=0;i<10;i++)
+      MyThread t1=new MyThread("t1");
+      t1.start();
+      MyThread t2=new MyThread("t1");
+      t2.start();
+      t2.setPriority(10);
+      for(int i=0;i<10;i++)
       {
       System.out.println("parent");
+      //System.out.println(Thread.currentThread().getName());
       }
     }
+    
 }
