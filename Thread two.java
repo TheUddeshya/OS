@@ -12,7 +12,7 @@ class  MyThread extends Thread
  }
  }
 }
-public class Vijay2 {
+public class u2 {
 
   
     public static void main(String[] args) throws InterruptedException
@@ -20,7 +20,7 @@ public class Vijay2 {
       MyThread t=new MyThread("t1");
       t.start();
       
-      //t.setName("vijay");
+      //t.setName("u2");
       for(int i=0;i<10;i++)
       {
       System.out.println("parent");
